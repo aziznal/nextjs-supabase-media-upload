@@ -33,6 +33,18 @@ export default function Header({ initialSession }: HeaderProps) {
             Home
           </Button>
         </Link>
+
+        <Link href="/upload-image">
+          <Button variant="link" tabIndex={-1}>
+            Upload Image
+          </Button>
+        </Link>
+
+        <Link href="/upload-video">
+          <Button variant="link" tabIndex={-1}>
+            Upload Video 
+          </Button>
+        </Link>
       </div>
 
       <div className="flex gap-4">
@@ -52,10 +64,10 @@ export default function Header({ initialSession }: HeaderProps) {
 
         {currentSession && (
           <div className="flex items-center gap-4">
-          <div>
-            <span className="text-gray-400">logged in as:{' '}</span>
-            <span>{currentSession.user?.email}</span>
-          </div>
+            <div>
+              <span className="text-gray-400">logged in as: </span>
+              <span>{currentSession.user?.email}</span>
+            </div>
 
             <Button
               onClick={() => {
