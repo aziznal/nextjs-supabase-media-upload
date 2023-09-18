@@ -38,8 +38,8 @@ export default function UploadImagePage() {
   };
 
   return (
-    <div className="items-center justify-center flex min-h-full gap-4">
-      <div className="w-[500px] flex flex-col gap-4">
+    <div className="items-center justify-center flex min-h-full gap-24">
+      <div className="w-[400px] flex flex-col gap-4 items-center">
         <Input
           type="file"
           accept=".jpg,.png"
@@ -86,7 +86,7 @@ export default function UploadImagePage() {
             disabled={isUploading}
             onClick={() => uploadImage(currentFile)}
           >
-            Upload
+            {isUploading ? <>Uploading...</> : <>Upload to Supabase</>}
           </Button>
         </div>
       )}
